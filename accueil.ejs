@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include ('partiales/head.ejs')%>
+    <!-- <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accueil - EJS</title>
+    <link rel="stylesheet" href="./public/css/style.css">
+    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href=""> -->
+
+   
+</head>
+<body>
+   <!--  <h1> Plateforme de streaming de DBE</h1>
+    <h1><%= title %></h1>
+   
+  
+    <div> 
+        La liste des films
+    </div>
+
+    <p>
+        <img src="./public/images/cool.jpeg" alt="">
+    </p>  -->
+
+    <!--L'entète de la page -->
+    <header>
+      <%- include ('partiales/header.ejs')%>
+
+    </header>
+      <!--le navbar de la page -->
+      
+
+    <nav>
+         <%- include ('partiales/navbar.ejs')%>
+    </nav>  
+    
+    <!--le contenu de la page -->
+    <main>
+        <h3>Bientot on aura les films</h3>
+        <div>
+            <article>
+                <table border="" style="width: 100%;">
+
+                    <tr>
+
+                        <th>Titre</th>
+                        <th>Année</th>
+                        <th>Réalisateur</th> 
+                    </tr>
+
+                    <% films.forEach(function(film) { %>
+                        <tr>
+                            <td><%= film.Title %></td>
+                            <td><%= film.Year %></td>
+                            <td><%= film.Author %></td>
+                        </tr>
+                        
+                    <%}); %>
+        
+                   <!--  <tr>
+                        <td>One piece</td>
+                        <td>2003</td>
+                        <td>DX</td>
+                    </tr>
+        
+                    <tr>
+                        <td>Two piece</td>
+                        <td>2021</td>
+                        <td>Art</td>
+                    </tr>
+        
+         -->
+                </table>
+            </article>
+        </div>
+        
+    </main>
+
+    <!--le pied de la page -->
+    <footer>
+        <%- include ('partiales/footer.ejs')%>
+    </footer>
+
+    
+
+</body>
+</html>
